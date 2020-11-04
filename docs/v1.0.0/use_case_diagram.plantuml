@@ -1,0 +1,9 @@
+@startuml Use Case Diagram
+
+actor ユーザー
+actor バフェットコード
+
+usecase 決算速報の一覧を見る
+
+ユーザー --> 決算速報の一覧を見る
+@enduml
