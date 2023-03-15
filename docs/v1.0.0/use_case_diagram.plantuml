@@ -1,0 +1,37 @@
+@startuml Use Case Diagram
+left to right direction
+
+actor ユーザー
+
+package 決算発表 {
+  usecase "一覧を見る" as ViewEarningsAnnouncement
+  usecase "検索する" as SearchEarningsAnnouncement
+  usecase "BCへ遷移する" as BCEarningsAnnouncement
+}
+ユーザー --> ViewEarningsAnnouncement
+ユーザー --> SearchEarningsAnnouncement
+ユーザー --> BCEarningsAnnouncement
+
+package 後で見る {
+  usecase "登録する" as CreateWatchLater
+  usecase "一覧を見る" as ViewWatchLater
+  usecase "削除する" as DeleteWatchLater
+  usecase "BCへ遷移する" as BCWatchLater
+}
+ユーザー --> CreateWatchLater
+ユーザー --> ViewWatchLater
+ユーザー --> DeleteWatchLater
+ユーザー --> BCWatchLater
+
+package お気に入り {
+  usecase "登録する" as CreateFavorite
+  usecase "一覧を見る" as ViewFavorite
+  usecase "削除する" as DeleteFavorite
+  usecase "BCへ遷移する" as BCFavorite
+}
+ユーザー --> CreateFavorite
+ユーザー --> ViewFavorite
+ユーザー --> DeleteFavorite
+ユーザー --> BCFavorite
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml Domain Model
+left to right direction
+
+hide circle
+hide members
+
+mix_actor ユーザー
+mix_actor バフェットコード
+
+class 優先市場
+class 企業
+class 決算短信
+class 有価証券報告書
+class お気に入り
+class 後で見る
+class ユーザー情報 
+
+ユーザー o-- ユーザー情報
+ユーザー情報 o-- お気に入り
+ユーザー情報 o-- 後で見る
+ユーザー o-- 企業
+企業 o-- 決算短信
+企業 o-- 有価証券報告書
+優先市場 o-- 企業
+お気に入り o-- 企業
+後で見る o-- 企業
+企業 --o バフェットコード
+
+@enduml
