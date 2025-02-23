@@ -1,9 +1,13 @@
 {
-    "$schema": "https://turbo.build/schema.json",
-    "tasks": {
-      "dev": {
-        "persistent": true,
-        "cache": false
-      }
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "//#format-and-lint": {},
+    "//#format-and-lint:fix": {
+      "cache": false
     }
   }
+}
